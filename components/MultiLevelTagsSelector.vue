@@ -138,7 +138,7 @@ function confirmSelected() {
           v-for="item in displayedLevel1Items"
           :key="item.id"
           :class="['w-full justify-center', { 'bg-white text-black': selectedL1 == item.id }]"
-          color="neutral" 
+          color="neutral"
           variant="link"
           @click="selectL1(item.id)"
         >
@@ -184,6 +184,7 @@ function confirmSelected() {
             :value="item.id"
             color="info"
             :ui="{ base: 'bg-white' }"
+            :model-value="selectedL3Ids.includes(item.id)"
             @update:model-value="checked => toggleL3Selection(item.id, checked)"
           />
         </div>
