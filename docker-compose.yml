@@ -2,8 +2,9 @@ services:
   nuxt:
     build: .
     ports:
-      - "3000:3000"
+      - "3578:3000"
     volumes:
       - .:/app
+      - /app/node_modules
     environment:
       - NODE_ENV=development # 可啟用熱重載 (HMR)
